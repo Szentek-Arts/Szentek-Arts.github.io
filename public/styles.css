@@ -29,3 +29,7 @@ body {
 a {
     color: #ffffff;
 }
+
+.profile-image {
+    width: 40vw;
+}
