@@ -21,15 +21,42 @@ img {
 
 /* change background colour*/
 body {
-    background-color: #000000;
+    background-color: #b5ecbe;
     color:#ffffff
 }
 
 /* change font colour*/
 a {
-    color: #ffffff;
+    color: #020202;
 }
 
 .profile-image {
     width: 40vw;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #262037;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+Add a color to the active/current link
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
