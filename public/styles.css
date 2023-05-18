@@ -1,14 +1,14 @@
 
-.image-container {
+/* .image-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
-img {
+/* img {
     animation: spin 2s linear infinite;
-  }
+  } */
   
   @keyframes spin {
     from {
@@ -19,7 +19,6 @@ img {
     }
   }
 
-/* change background colour*/
 body {
     background-color: #b5ecbe;
     color:#ffffff
@@ -38,7 +37,7 @@ a {
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
+/* nav bar styling */
 .topnav a {
   float: left;
   color: #262037;
@@ -49,14 +48,111 @@ a {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
+/* color link on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-Add a color to the active/current link
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+.event img:hover{
+  opacity: 0.5;
+
+}
+
+.row {
+  display: flex;
+  padding: 3%;
+}
+
+.column {
+  flex: 50%;
+}
+
+.event-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.column:hover{
+  cursor: pointer;
+}
+
+.column div{
+  position: relative;
+  top: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: #b5ecbe;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.column:hover div{
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.7; 
+
+}
+
+.column:hover img{
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.8s linear;
+  opacity: 0.2;
+}
+
+.kiko {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 70px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: auto;
+  float: right;
+  padding-right: 100px;
+}
+
+.bounce-2 {
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-2 {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-100px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: fit-content;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
