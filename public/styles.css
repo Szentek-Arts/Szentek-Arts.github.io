@@ -119,11 +119,9 @@ a {
 
 .event-text {
 
-  font-size: xx-large;
+  font-size: x-large;
   color: black;
   outline: #b5ecbe;
-  text-align:justify;
-  align-items: baseline;
 }
 
 .bounce-2 {
