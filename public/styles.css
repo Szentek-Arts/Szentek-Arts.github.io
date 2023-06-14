@@ -143,6 +143,23 @@ a {
       transform: translateY(0);
   }
 }
+.bounce-3 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+}
+@keyframes bounce-3 {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-450px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
 
 div.gallery {
   margin: 5px;
