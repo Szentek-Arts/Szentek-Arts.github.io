@@ -2,6 +2,14 @@ body {
     background: #000;
     /* margin: 0;
     padding: 0; */
+    background-image: url(../../data/teaser2.png);
+    /* fit the backgroung image */
+    background-size: cover;
+    /* center the background image */
+    background-position: center;
+    /* make the background image fixed */
+    background-attachment: fixed;
+    /* make the background image full screen */
   }
 
 .audio {
