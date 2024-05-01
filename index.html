@@ -1,5 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
+<canvas id="c"></canvas>
+
+</html>
+
+
+
+
+
+
+<style>
+    body,
+    html {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    canvas {
+        z-index: 999;
+        margin: 100px;
+        padding-top: 200px;
+        padding-right: 300px;
+        background-color: transparent;
+        position: absolute;
+
+
+    }
+
+    h1,
+    p {
+        text-align: center;
+        font-family: monospace;
+        font-size: medium;
+        color: blueviolet;
+    }
+</style>
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +47,60 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 </head>
 
+
+
 <body>
     <header>
-        <div class="card">
+
+        <div class="card" style="font-family: monospace; color:crimson">
             <div class="flex-container">
                 <img src="public/assets/szentek-gif.gif" alt="Szentek">
+
+                <script>
+                    var rainNum = 100;
+                    var g = 0;
+                    var phrase = 'boogie again soon';
+                    var canvas = document.getElementById('c');
+                    var ctx = canvas.getContext('2d');
+
+                    var w = window.innerWidth / 1.1; var h = window.innerHeight / 1.1;
+                    var x = 100; var y = 100;
+
+                    var rain = [];
+                    for (i = 0; i < rainNum; i++) {
+                        rain.push(new newRain);
+                    }
+
+                    function newRain() {
+                        this.x = Math.random() * w;
+                        this.y = Math.random() * h;
+                    }
+
+                    var draw = function () {
+                        c.width = w;
+                        c.height = h;
+
+                        for (t = 0; t < rain.length; t++) {
+                            var r = rain[t];
+                            const grad = ctx.createLinearGradient(0, 0, 280, 0);
+
+
+                            ctx.beginPath();
+                            ctx.font = "bold 24px arial";
+
+                            ctx.strokeText('boogie again soon', r.x, r.y);
+
+
+                            r.y++;
+
+                            if (r.y > h + 20) {
+                                r.y = -100;
+                            }
+                        }
+                    };
+
+                    setInterval(draw, 3);
+                </script>
 
                 <div class="topnav">
                     <a class="active" href="#home">Home</a>
@@ -42,28 +129,52 @@
 
     <body style="text-align: center;">
         <div class="card">
-            <div class="container" style="text-align: center;">
-                <video width="60%" controls autoplay>
-                    <source src="./public/assets/szen-brathroom-djs.mp4" type="video/mp4">
-                </video>
-
-                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-top: 3%;" />
-            
             <div class="row">
+                <div class="column" style="padding-left: 5%;">
+                    <video width="100%" controls autoplay>
+                        <source src="./public/assets/szen-brathroom-djs.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="column">
+                    <!-- <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko"
+                        style="padding-top: 3%;" /> -->
+                </div>
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+                <img class="kiko bounce-2" src="./public/assets/kiko.png" alt="kiko" style="padding-bottom: 50px;" />
+            </div>
+
+            <div class="row" style="padding-top: 0%;">
+                <div style="flex:25%">
                     <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="380" width="300"
                         src="https://open.spotify.com/embed/playlist/5U8TkTbnqUC6CjtIRIJ1l3"></iframe>
                 </div>
-                <div class="column" >
-                    <img src="./public/assets/knight-kiko.png" alt="kiko-knight"  height="380" width="300"/>
-                    
+                <div style="flex:25%">
+
+                    <div style="border: 2px solid #4ae328; overflow: hidden; margin: 15px auto; max-width: 575px;">
+                        <iframe scrolling="yes" src="https://www.thesaint.scot/post/clubbing-in-the-castle"
+                            style="border: 0px none; margin-left: -36px; height: 812px; margin-top: -486px; width: 650px;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div style="flex:25%">
+                    <img src="./public/assets/knight-kiko.png" alt="kiko-knight" width="80%" style="opacity: 50%;" />
+
                 </div>
             </div>
         </div>
 
-            <h3 style="padding-top: 10%; color: gray;">
-                Proudly sponsored by EZTestKits, Lumography, and Tenzing.
-            </h3>
+        <h3 style="color: gray;">
+            Proudly sponsored by EZTestKits, Lumography, and Tenzing.
+        </h3>
     </body>
 
 </html>
